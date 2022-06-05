@@ -1,0 +1,134 @@
+@import '../../style/theme.scss';
+$scaleDeltaSmall: 0.05;
+// Transitions
+@keyframes scaleInSmall {
+  0% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  70% {
+    -webkit-transform: scale(1 + $scaleDeltaSmall, 1 + $scaleDeltaSmall);
+    transform: scale(1 + $scaleDeltaSmall, 1 + $scaleDeltaSmall);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
+$scaleDeltaLarge: 0.3;
+@keyframes scaleInLarge {
+  0% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1 + $scaleDeltaLarge, 1 + $scaleDeltaLarge);
+    transform: scale(1 + $scaleDeltaLarge, 1 + $scaleDeltaLarge);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+$translateX: 300px;
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-$translateX);
+    transform: translateX(-$translateX);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-$translateX);
+    transform: translateX(-$translateX);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@mixin slide-right($translateX: 100px, $duration: 0.5s) {
+  -webkit-animation: slide-right $duration cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: slide-right $duration cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@mixin short-color-fadein {
+  -webkit-animation: opacity-fade 0.5s ease-in;
+  animation: opacity-fade 0.5s ease-in;
+}
+
+// style
+.musicContainer {
+  height: 100vh;
+    background: url('https://anh.waki.vn/wp-content/uploads/2020/12/echo/54e8d1414350a814f6da8c7dda793e7d1d3cdce0554c704f75277ad79245c25e_1280.jpg')
+      no-repeat center/cover;
+  // background: linear-gradient(89deg, #ff5edf 0%, #04c8de 100%);
+}
+.disk-area-wrapper {
+  max-width: 80%;
+  min-height: 20rem;
+  .classify-simple-logo {
+    width: 100%;
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include slide-right;
+    img {
+      cursor: pointer;
+      max-width: 468px;
+      max-width: 80%;
+      &:hover {
+        animation: scaleInSmall 2s cubic-bezier(0.36, 0.11, 0.11, 0.32);
+      }
+      &:active {
+        animation: scaleInLarge 0.5s cubic-bezier(0.36, 0.11, 0.11, 0.32);
+      }
+    }
+  }
+}
+
+.file-selection-wrapper {
+  h2 {
+    overflow: hidden;
+    color: $color-primary;
+    /* Ensures the content is not revealed until the animation */
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.01em;
+    /* Adjust as needed */
+    font-weight: lighter;
+    font-family: $font-title-regular;
+    animation: typing 1.5s steps(40, end);
+  }
+  .upload-predict-wrapper {
+    @include short-color-fadein;
+    p {
+      color: azure;
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+  }
+}

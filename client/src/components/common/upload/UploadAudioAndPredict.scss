@@ -1,0 +1,100 @@
+@import '../../../style/theme.scss';
+$translateY: 200px;
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(-$translateY);
+    transform: translateY(-$translateY);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(-$translateY);
+    transform: translateY(-$translateY);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@mixin slide-top($translateY: 100px, $duration: 0.5s) {
+  -webkit-animation: slide-top $duration cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: slide-top $duration cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.input-slide-down-animation {
+  @include slide-top();
+}
+
+input.form-control {
+  border-radius: 30px;
+  outline: none;
+  padding: 3px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.prediction-btn-wrapper {
+  button {
+    margin-right: 1rem;
+    margin-top: 1rem;
+    background-color: $color-primary;
+    border-color: $color-primary-dark;
+    border-radius: 30px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    &:active,
+    &:hover {
+      background-color: $color-primary;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+    &:disabled {
+      background-color: $color-accent-dark;
+      box-shadow: none;
+    }
+  }
+  div.predict-results {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    p.result-text {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.prediction-result-wrapper {
+  margin-top: 1rem;
+  div.info-box-wrapper {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  p {
+    margin-top: 0.3rem;
+  }
+  
+}
+
+.error-message-wrapper {
+  margin-top: 1rem;
+  color: white;
+  div.info-box-wrapper {
+    background-color: $color-warning-light;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+}

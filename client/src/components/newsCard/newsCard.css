@@ -1,0 +1,34 @@
+.news-media {
+  height: 250px;
+}
+.news-border {
+  border: solid;
+}
+.news-fullHeightCard {
+  height: 100%;
+}
+.news-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 10px solid white;
+}
+.news-activeCard {
+  border-bottom: 10px solid #22289a;
+}
+.news-grid {
+  display: flex;
+}
+.news-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+.news-title {
+  padding: 0 16px;
+}
+.news-cardActions {
+  padding: 0 16px 8px 16px;
+  display: flex;
+  justify-content: space-between;
+}

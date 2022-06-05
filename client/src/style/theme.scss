@@ -1,0 +1,33 @@
+@import "~bootstrap/scss/bootstrap";
+
+/**
+  App Theme used throughout the App.
+ */
+
+$background-color: #26323812;
+$background-color-light: rgba(115, 158, 165, 0.07);
+$background-color-dark: rgba(52, 68, 75, 0.07);
+$primary-text: #212121;
+$body-bg: $background-color;
+$secondary-text: #BDBDBD;
+$divider-color: #BDBDBD;
+$text-icons: #212121;
+$color-accent: #57A0D3;
+$color-accent-light: rgba(3, 168, 244, 0.336);
+$color-accent-dark: #022a3b;
+$color-primary: #70AD47;
+$color-primary-light: #70AD47;
+$color-primary-dark: #1fab89;
+$color-warning: #91262D;
+$color-warning-light: #f55a45a8;
+$color-warning-dark: #4b0b00;
+$color-success: #4AB052;
+$color-success-light: #60ad5e;
+$color-success-dark: #005005;
+$color-light: #F9F9F9;
+$color-dark: #323232;
+$theme-colors: ( "primary": $color-primary, "secondary": $color-accent, "danger": $color-warning, "success": $color-success, "info": $info, "warning": $color-warning-light, "light": $color-accent-dark, "dark": $color-accent-dark);
+$font-title-regular: 'Source Sans Pro',
+sans-serif;
+$font-body: 'Source Sans Pro',
+sans-serif;

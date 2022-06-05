@@ -1,0 +1,24 @@
+@import '../../..//style/theme.scss';
+.title-wrapper {
+    h1 {
+        margin-left: 10%;
+        cursor: pointer;
+        font-family: $font-title-regular;
+        font-weight: bolder;
+        color: $color-primary;
+    }
+    hr {
+        border: 0;
+        height: 1px;
+        background: linear-gradient(to right, $divider-color, rgba($primary-text, .8), rgba($primary-text, .5));
+    }
+}
+
+.subtitle-wrapper {
+    margin-top: 1.5rem;
+    h2 {
+        font-weight: lighter;
+        font-family: $font-title-regular;
+        border-bottom: #263238 2px;
+    }
+}
