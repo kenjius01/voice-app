@@ -20,7 +20,7 @@ const PredictionResult = ({ result }) => {
   } else {
     return (
       <div className='predict-results input-slide-down-animation'>
-        <p className='result-text'>Our Neural Network Predicted:</p>
+        <p className='result-title'>Our Classification Music Genre Predicted:</p>
         <p className='result-text'>
           Disco: <strong> {result['0'] * 10}%</strong>! 🎶 🎉
         </p>

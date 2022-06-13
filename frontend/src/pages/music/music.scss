@@ -83,8 +83,10 @@ $translateX: 300px;
   // background: linear-gradient(89deg, #ff5edf 0%, #04c8de 100%);
 }
 .disk-area-wrapper {
-  max-width: 80%;
-  min-height: 20rem;
+  display: flex;
+  margin-left: 5%;
+  margin-right: 20%;
+  // min-height: 20rem;
   .classify-simple-logo {
     width: 100%;
     max-width: 50%;
