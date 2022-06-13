@@ -22,31 +22,34 @@ const PredictionResult = ({ result }) => {
       <div className='predict-results input-slide-down-animation'>
         <p className='result-text'>Our Neural Network Predicted:</p>
         <p className='result-text'>
-          Blues: <strong> {result[0]}%</strong>! 🎶 🎉
+          Disco: <strong> {result['0'] * 10}%</strong>! 🎶 🎉
         </p>
         <p className='result-text'>
-          Classical: <strong> {result[1]}%</strong>! 🎶 🎉
+          Metal: <strong> {result['1'] * 10}%</strong>! 🎶 🎉
         </p>
         <p className='result-text'>
-          Country: <strong> {result[2]}%</strong>! 🎶 🎉
+          Reggae: <strong> {result['2'] * 10}%</strong>! 🎶 🎉
         </p>
         <p className='result-text'>
-          Disco: <strong> {result[3]}%</strong>! 🎶 🎉
+          Blues: <strong> {result['3'] * 10}%</strong>! 🎶 🎉
         </p>
         <p className='result-text'>
-          Hip-hop: <strong> {result[4]}%</strong>! 🎶 🎉
+          Rock: <strong> {result['4'] * 10}%</strong>! 🎶 🎉
         </p>
         <p className='result-text'>
-          Jazz: <strong> {result[5]}%</strong>! 🎶 🎉
+          Classical: <strong> {result['5'] * 10}%</strong>! 🎶 🎉
         </p>
         <p className='result-text'>
-          Metal: <strong> {result[6]}%</strong>! 🎶 🎉
+          Jazz: <strong> {result['6'] * 10}%</strong>! 🎶 🎉
         </p>
         <p className='result-text'>
-          Pop: <strong> {result[7]}%</strong>! 🎶 🎉
+          Hiphop: <strong> {result['7'] * 10}%</strong>! 🎶 🎉
         </p>
         <p className='result-text'>
-          Rock: <strong> {result[8]}%</strong>! 🎶 🎉
+          Country: <strong> {result['8'] * 10}%</strong>! 🎶 🎉
+        </p>
+        <p className='result-text'>
+          Pop: <strong> {result['9'] * 10}%</strong>! 🎶 🎉
         </p>
         {/* <h1>Music Genre Analysis</h1>
         <p>(Swipe down to see more)</p>
@@ -89,13 +92,12 @@ export const UploadAudioAndPredict = (props) => {
     console.log(selectedFile);
     data.append('file_name', selectedFile.name);
 
-    let url = 'https://music-genre-flask.herokuapp.com/uploadfile';
+    let url = ' http://127.0.0.1:5000/predict';
     setLoading(true);
     setErrorMessage('');
     setPredictedGenre('');
     post(url, data)
       .then((res) => {
-        console.log(res);
         setPredictedGenre(res.data.music_prediction);
       })
       .catch((err) => {
