@@ -8,20 +8,48 @@ import 'react-h5-audio-player/lib/styles.css';
 import './UploadAudioAndPredict.scss';
 
 const PredictionResult = ({ result }) => {
+  const label = [
+    'Disco',
+    'Metal',
+    'Reggae',
+    'Blues',
+    'Rock',
+    'Classical',
+    'Jazz',
+    'Hiphop',
+    'Country',
+    'Pop',
+  ];
   if (result.length <= 0) {
     return (
       <div className='nothing'>
         <p>
           Please upload the song first (and make sure that it should have a
-          duration of at least 60sec)
+          duration of at least 30sec)
         </p>
       </div>
     );
   } else {
     return (
       <div className='predict-results input-slide-down-animation'>
-        <p className='result-title'>Our Classification Music Genre Predicted:</p>
-        <p className='result-text'>
+        <p className='result-title'>
+          Our Classification Music Genre Predicted:
+        </p>
+        {Object.keys(result).map((key, index) =>
+          result[key] > 0 ? (
+            <p key={index} className='result-text'>
+              {label[key]}:{' '}
+              <strong>
+                {' '}
+                {result[key] * 10}
+                <small>%</small>
+              </strong>
+               🎶 🎉
+            </p>
+          ) : null
+        )}
+
+        {/* <p className='result-text'>
           Disco: <strong> {result['0'] * 10}%</strong>! 🎶 🎉
         </p>
         <p className='result-text'>
@@ -50,19 +78,7 @@ const PredictionResult = ({ result }) => {
         </p>
         <p className='result-text'>
           Pop: <strong> {result['9'] * 10}%</strong>! 🎶 🎉
-        </p>
-        {/* <h1>Music Genre Analysis</h1>
-        <p>(Swipe down to see more)</p>
-        <h3>Blues:{result[0]}%</h3>
-        <h3>Classical:{result[1]}%</h3>
-        <h3>Country:{result[2]}%</h3>
-        <h3>Disco:{result[3]}%</h3>
-        <h3>Hip-hop:{result[4]}%</h3>
-        <h3>Jazz:{result[5]}%</h3>
-        <h3>Metal:{result[6]}%</h3>
-        <h3>Pop:{result[7]}%</h3>
-        <h3>Reggae:{result[8]}%</h3>
-        <h3>Rock:{result[9]}%</h3> */}
+        </p> */}
       </div>
     );
   }
