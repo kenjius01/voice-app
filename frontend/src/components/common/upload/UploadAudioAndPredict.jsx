@@ -6,6 +6,7 @@ import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 
 import './UploadAudioAndPredict.scss';
+import { BarChart } from '../barChart/BarChart';
 
 const PredictionResult = ({ result }) => {
   const label = [
@@ -20,6 +21,7 @@ const PredictionResult = ({ result }) => {
     'Country',
     'Pop',
   ];
+  const [isShowChart, setIsShowChart] = useState(false);
   if (result.length <= 0) {
     return (
       <div className='nothing'>
@@ -30,11 +32,11 @@ const PredictionResult = ({ result }) => {
       </div>
     );
   } else {
-    return (
+    return isShowChart === false ? (
       <div className='predict-results input-slide-down-animation'>
-        <p className='result-title'>
+        <h3 className='result-title'>
           Our Classification Music Genre Predicted:
-        </p>
+        </h3>
         {Object.keys(result).map((key, index) =>
           result[key] > 0 ? (
             <p key={index} className='result-text'>
@@ -44,41 +46,24 @@ const PredictionResult = ({ result }) => {
                 {result[key] * 10}
                 <small>%</small>
               </strong>
-               🎶 🎉
+              🎶 🎉
             </p>
           ) : null
         )}
-
-        {/* <p className='result-text'>
-          Disco: <strong> {result['0'] * 10}%</strong>! 🎶 🎉
-        </p>
-        <p className='result-text'>
-          Metal: <strong> {result['1'] * 10}%</strong>! 🎶 🎉
-        </p>
-        <p className='result-text'>
-          Reggae: <strong> {result['2'] * 10}%</strong>! 🎶 🎉
-        </p>
-        <p className='result-text'>
-          Blues: <strong> {result['3'] * 10}%</strong>! 🎶 🎉
-        </p>
-        <p className='result-text'>
-          Rock: <strong> {result['4'] * 10}%</strong>! 🎶 🎉
-        </p>
-        <p className='result-text'>
-          Classical: <strong> {result['5'] * 10}%</strong>! 🎶 🎉
-        </p>
-        <p className='result-text'>
-          Jazz: <strong> {result['6'] * 10}%</strong>! 🎶 🎉
-        </p>
-        <p className='result-text'>
-          Hiphop: <strong> {result['7'] * 10}%</strong>! 🎶 🎉
-        </p>
-        <p className='result-text'>
-          Country: <strong> {result['8'] * 10}%</strong>! 🎶 🎉
-        </p>
-        <p className='result-text'>
-          Pop: <strong> {result['9'] * 10}%</strong>! 🎶 🎉
-        </p> */}
+        <button className='btn btn-dark' onClick={() => setIsShowChart(true)}>
+          View chart
+        </button>
+      </div>
+    ) : (
+      <div>
+        <BarChart result={result} />
+        <button
+          style={{ display: 'flex', marginRight: 'auto', marginLeft: 'auto' }}
+          className='btn btn-dark'
+          onClick={() => setIsShowChart(false)}
+        >
+          View Result Text
+        </button>
       </div>
     );
   }
@@ -155,7 +140,7 @@ export const UploadAudioAndPredict = (props) => {
       <div className='form-row'>
         {selectedFile && (
           <AudioPlayer
-            style={{ borderRadius: '10px' }}
+            style={{ borderRadius: '10px', color: 'green' }}
             autoPlay={false}
             src={audioLink}
           />

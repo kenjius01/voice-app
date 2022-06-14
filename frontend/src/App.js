@@ -126,6 +126,10 @@ function App() {
         } else if (command === 'showWeather') {
           fetchWeather(data);
         }
+        // Music classification
+        else if (command === 'music') {
+          navigate.current('/music-classification');
+        }
       },
     });
   }, []);
