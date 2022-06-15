@@ -65,16 +65,30 @@ input.form-control {
   }
   div.predict-results {
     display: flex;
-    align-items: center;
+    // align-items: baseline;
     flex-direction: column;
     gap: 12px;
     p.result-text {
       padding: 0;
       margin: 0;
     }
+    div.result-wrap {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-left: 18%;
+    }
     h3.result-title {
       padding-top: 10px;
       color: white;
+      text-align: center;
+    }
+    button.btn-dark {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    img {
+      border-radius: 100%;
     }
   }
 }

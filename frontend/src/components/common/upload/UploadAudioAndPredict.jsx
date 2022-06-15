@@ -49,28 +49,36 @@ const PredictionResult = ({ result }) => {
         <h3 className='result-title'>
           Our Classification Music Genre Predicted:
         </h3>
+
         {Object.keys(result).map((key, index) =>
           result[key] > 0 ? (
-            <p key={index} className='result-text'>
-              {label[key]}:{' '}
-              <strong>
-                {' '}
-                {result[key] * 10}
-                <small>%</small>
-              </strong>
-              🎶 🎉.
-              <span style={{ marginLeft: '10px' }}>
-                What is {label[key]}? Find out{' '}
-                <a
-                  style={{ color: '#4AB052', textDecoration: 'none' }}
-                  href={`https://vi.wikipedia.org/wiki/${search[key]}`}
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  here
-                </a>{' '}...
-              </span>
-            </p>
+            <div key={index} className='result-wrap'>
+              <img
+                src={`https://source.unsplash.com/70x70/?${label[key]}-music`}
+                alt='img music-genre'
+              />
+              <p className='result-text'>
+                {label[key]}:{' '}
+                <strong>
+                  {' '}
+                  {result[key] * 10}
+                  <small>%</small>
+                </strong>
+                🎶 🎉.
+                <span style={{ marginLeft: '10px' }}>
+                  What is {label[key]}? Find out{' '}
+                  <a
+                    style={{ color: '#4AB052', textDecoration: 'none' }}
+                    href={`https://vi.wikipedia.org/wiki/${search[key]}`}
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    here
+                  </a>{' '}
+                  ...
+                </span>
+              </p>
+            </div>
           ) : null
         )}
         <button className='btn btn-dark' onClick={() => setIsShowChart(true)}>
@@ -97,7 +105,8 @@ const ErrorMessage = (props) => (
     <div className='info-box-wrapper'>
       <span className='symbol-input100'>
         <i className='fa fa-exclamation-triangle' aria-hidden='true'></i> Error!
-        {props.error}
+        Please make sure that file should have a duration of at least 30sec and
+        in right format!
       </span>
     </div>
   </div>
@@ -167,7 +176,7 @@ export const UploadAudioAndPredict = (props) => {
             autoPlay={false}
             src={audioLink}
             onPlay={() => props.setIsPlay(true)}
-            onPause = {() => props.setIsPlay(false)}
+            onPause={() => props.setIsPlay(false)}
           />
         )}
       </div>
