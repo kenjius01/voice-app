@@ -75,11 +75,20 @@ $translateX: 300px;
   animation: opacity-fade 0.5s ease-in;
 }
 
+@keyframes logo-spin {
+  from {
+    transform: scale(0.7);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 // style
 .musicContainer {
   height: 100vh;
-    background: url('https://anh.waki.vn/wp-content/uploads/2020/12/echo/54e8d1414350a814f6da8c7dda793e7d1d3cdce0554c704f75277ad79245c25e_1280.jpg')
-      no-repeat center/cover;
+  background: url('https://anh.waki.vn/wp-content/uploads/2020/12/echo/54e8d1414350a814f6da8c7dda793e7d1d3cdce0554c704f75277ad79245c25e_1280.jpg')
+    no-repeat center/cover;
   // background: linear-gradient(89deg, #ff5edf 0%, #04c8de 100%);
 }
 .disk-area-wrapper {
@@ -105,6 +114,10 @@ $translateX: 300px;
       }
     }
   }
+}
+
+.rotate {
+  animation: logo-spin infinite 1s linear;
 }
 
 .file-selection-wrapper {

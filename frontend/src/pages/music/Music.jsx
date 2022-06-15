@@ -6,7 +6,7 @@ import './music.scss';
 
 const Music = () => {
   const [active, setActive] = useState(false);
-
+  const [isPlay, setIsPlay] = useState(false)
   return (
     <div className='musicContainer'>
       <Title>Classify</Title>
@@ -16,6 +16,7 @@ const Music = () => {
             src={logo}
             alt='classify-simple-logo'
             onClick={() => setActive(!active)}
+            className={isPlay === true ? 'rotate' : null}
           />
         </div>
         <div className='file-selection-wrapper col-sm-12 col-md-6'>
@@ -27,7 +28,7 @@ const Music = () => {
                 processing can take up to a minute depending on the size of the
                 file.
               </p>
-              <UploadAudioAndPredict setActive={setActive} />
+              <UploadAudioAndPredict setIsPlay = {setIsPlay} setActive={setActive} />
             </div>
           )}
         </div>

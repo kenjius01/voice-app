@@ -21,6 +21,18 @@ const PredictionResult = ({ result }) => {
     'Country',
     'Pop',
   ];
+  const search = [
+    'Disco',
+    'Heavy metal',
+    'Reggae',
+    'Blues',
+    'Rock',
+    'Nhạc_cổ_điển',
+    'Jazz',
+    'Hiphop',
+    'Nhạc_đồng_quê',
+    'Pop',
+  ];
   const [isShowChart, setIsShowChart] = useState(false);
   if (result.length <= 0) {
     return (
@@ -46,7 +58,18 @@ const PredictionResult = ({ result }) => {
                 {result[key] * 10}
                 <small>%</small>
               </strong>
-              🎶 🎉
+              🎶 🎉.
+              <span style={{ marginLeft: '10px' }}>
+                What is {label[key]}? Find out{' '}
+                <a
+                  style={{ color: '#4AB052', textDecoration: 'none' }}
+                  href={`https://vi.wikipedia.org/wiki/${search[key]}`}
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  here
+                </a>{' '}...
+              </span>
             </p>
           ) : null
         )}
@@ -143,6 +166,8 @@ export const UploadAudioAndPredict = (props) => {
             style={{ borderRadius: '10px', color: 'green' }}
             autoPlay={false}
             src={audioLink}
+            onPlay={() => props.setIsPlay(true)}
+            onPause = {() => props.setIsPlay(false)}
           />
         )}
       </div>
