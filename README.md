@@ -1,6 +1,7 @@
 # Bài tập lớn môn Xử lý tiếng nói
 
 **Dự án**: Alan Web App
+
 **Thành viên - công việc: (Nhóm 7)**
  1. 19021388 - Kiều Văn Tuyên (Làm chức năng dự đoán thể loại nhạc)
  2. 
