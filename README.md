@@ -10,3 +10,24 @@
  
 ## Mô tả chung về dự án
 Trang web cung cấp trợ lý giọng nói là [Alan AI](https://alan.app/) giúp cho việc tương tác với máy tính trở nên dễ dàng hơn. Trang web gồm các chức năng chính là: Xem phim, đọc báo, xem thông tin thời tiết các khu vực, và cuối cúng là phân loại thể loại âm nhạc.
+
+## Các chức năng của web
+
+### Dự đoán thể loại âm nhạc
+Khi chúng ta nghe một bài hát, có đôi lúc chúng ta sẽ thắc mắc hay tò mò về thể loại của bài hát đó. Trang web này có chức năng giúp chúng ta có thể biết được thể loại bài hát một cách đơn giản với độ chính xác là 75%.
+#### Link demo chức năng: 
+#### Dữ liệu
+Dữ liệu được sử dụng trong chức năng này được lấy từ bộ dữ liệu [GTZAN Dataset - Music Genre Classification](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification).
+
+Tuy nhiên, nhóm chúng em chỉ sử dụng dữ liệu trong folder 'genres original' (Một bộ sưu tập gồm 10 thể loại với 100 tệp âm thanh, mỗi thể loại có độ dài 30 giây) để thực hiện cho việc huấn luyện model. Có tổng cộng 10 thể loại trong tập dữ liệu:
+1. Disco
+2. Metal
+3. Reggae
+4. Blues
+5. Rock
+6. Classical
+7. Jazz
+8. Hiphop
+9. Country
+10. Pop
+
