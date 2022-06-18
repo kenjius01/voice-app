@@ -146,10 +146,12 @@ export const UploadAudioAndPredict = (props) => {
     setAudioLink(null);
     setPredictedGenre('');
     props.setActive(false);
+    props.setIsPlay(false)
     setErrorMessage('');
   };
 
   const handleInputChange = (e) => {
+    setPredictedGenre('')
     setSelectedFile(e.target.files[0]);
     setErrorMessage('');
     const url = URL.createObjectURL(e.target.files[0]);
