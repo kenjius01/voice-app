@@ -14,8 +14,8 @@ Trang web cung cấp trợ lý giọng nói là [Alan AI](https://alan.app/) gi�
 ## Các chức năng của web
 
 ### Dự đoán thể loại âm nhạc
-Khi chúng ta nghe một bài hát, có đôi lúc chúng ta sẽ thắc mắc hay tò mò về thể loại của bài hát đó. Trang web này có chức năng giúp chúng ta có thể biết được thể loại bài hát một cách đơn giản với độ chính xác là 76%.
-#### Link demo chức năng: 
+Khi chúng ta nghe một bài hát, có đôi lúc chúng ta sẽ thắc mắc hay tò mò về thể loại của bài hát đó. Trang web này có chức năng giúp chúng ta có thể biết được thể loại bài hát một cách đơn giản với độ chính xác là 76%. Ngoài ra, sau khi có kết quả dự đoán thì ta có thể xem được biểu đồ dự đoán hay có thể là xem được thông tin về thể loại âm nhạc mà kết quả trả về.
+#### Link demo chức năng: [Demo](https://drive.google.com/file/d/1NcOP2-T-5Uzc9JflU-d14CuZvno7tvLG/view?usp=sharing)
 #### Dữ liệu
 Dữ liệu được sử dụng trong chức năng này được lấy từ bộ dữ liệu [GTZAN Dataset - Music Genre Classification](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification).
 
@@ -53,4 +53,5 @@ Cuối cùng, đầu ra có tổng cộng 10 neurons, mỗi neuron trong số ch
 Có tổng cộng 600 epoch và batch size là 512, trọng số được thay đổi để giảm thiểu chi phí. Để giảm thiểu chi phí, trình tối ưu hóa adam đã được sử dụng. Hàm mất mát được sử dụng là sparse_categorical_crossentropy, rất hữu ích trong trường hợp đầu ra không được mã hóa one hot và cuối cùng đầu ra được định trước là đầu ra có xác suất cao nhất. Ngoài ra việc sử dụng hàm callback EarlyStopping trong keras giúp ngừng training khi không có sự cải thiện về loss sau 1 số epoch liên tiếp giúp cho việc training trở nên nhanh chóng và hiệu quả hơn.
 #### Kết quả: 
 Việc áp dụng mô hình vào dữ liệu test dẫn đến độ chính xác là 76%, có thể được coi là khá tốt với điều kiện đây không phải là phân loại nhị phân và rất nhiều nhầm lẫn có thể xảy ra khi phân biệt một số thể loại tương tự.
-[](https://github.com/kenjius01/voice-app/result.png)
+
+![](https://github.com/kenjius01/voice-app/blob/main/result.png)
