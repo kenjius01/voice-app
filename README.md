@@ -55,3 +55,14 @@ Có tổng cộng 600 epoch và batch size là 512, trọng số được thay �
 Việc áp dụng mô hình vào dữ liệu test dẫn đến độ chính xác là 76%, có thể được coi là khá tốt với điều kiện đây không phải là phân loại nhị phân và rất nhiều nhầm lẫn có thể xảy ra khi phân biệt một số thể loại tương tự.
 
 ![](https://github.com/kenjius01/voice-app/blob/main/result.png)
+
+- Movie Page
+  + Người dùng có thể tra các câu lệnh ở nút '?'
+  + Tìm kiếm phim theo năm
+  + Tìm kiếm theo thể loại
+  + Hiện thị danh sách những bộ phim mới nhất. Khi đó, các thông tin về bộ phim sẽ hiển thị trên màn hình, 
+      bao gồm 20 bộ phim theo thứ tự sắp xếp (Giả sử tìm kiếm phim hot nhất, thứ tự sẽ là điểm đánh giá từ cao xuống thấp,..)
+  + Xem thông tin và nghe review về từng phim cụ thể (Lệnh: Tell me about + tên phim)
+  + Xem trailer về phim (Lệnh: Play trailer for + tên phim)
+  + Xem tổng hợp những nhận xét, đánh giá, phê bình và điểm số của một bộ phim thông qua số thứ tự (Lệnh: Open the movie + số thứ tự phim)
+
