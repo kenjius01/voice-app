@@ -56,8 +56,7 @@ Việc áp dụng mô hình vào dữ liệu test dẫn đến độ chính xác
 
 ![](https://github.com/kenjius01/voice-app/blob/main/result.png)
 
-####
-- Movie Page
+## Movie Page
   + Người dùng có thể tra các câu lệnh ở nút '?'
   + Tìm kiếm phim theo năm
   + Tìm kiếm theo thể loại
