@@ -66,7 +66,12 @@ Việc áp dụng mô hình vào dữ liệu test dẫn đến độ chính xác
   + Xem thông tin và nghe review về từng phim cụ thể (Lệnh: Tell me about + tên phim)
   + Xem trailer về phim (Lệnh: Play trailer for + tên phim)
   + Xem tổng hợp những nhận xét, đánh giá, phê bình và điểm số của một bộ phim thông qua số thứ tự (Lệnh: Open the movie + số thứ tự phim)
-
+### News Paper
+  #### Link demo chức năng: [Demo](https://drive.google.com/file/d/1V9_jK_cyw86xC97iYZ7x9mfZIQLbNFp_/view?usp=sharing)
+  + Tìm kiếm thông tin theo nguồn (Dùng lệnh: Give me the new from + nguồn: CNN, ABC News,...)
+  + Tìm kiếm theo lĩnh vực (Dùng lệnh: Give me the latest news from + chủ đề, lĩnh vực: Music, science, technology, business)
+  + Tìm kiếm theo từ khoá bất kì (What’s up with + từ khóa)
+Từ đây ta có thể tra cứu bất kì tin tức nào thông qua giọng nói.
 ### Xem dự báo thời tiết
 #### Link demo chức năng: [Demo](https://drive.google.com/file/d/18L_Q6CqyywWynfJCOWblZQYarReFMVc4/view?usp=sharing)
 Xem dự báo thời tiết ở một thành phố cụ thể (Dùng lệnh: Give me the weather in + tên thành phố). Giao diện sẽ hiện lên một thẻ chứa thông tin thời tiết của thành phố đó, bao gồm: nhiệt độ, trạng thái (có mây, mưa, ...), thời điểm bắt đầu bình minh và hoàng hôn, tốc độ gió, độ ẩm cũng như là thông tin thời tiết về các ngày tiếp theo trong tuần. Qua đó, có được cái nhìn khách quan về thời tiết một cách rõ ràng hơn.
