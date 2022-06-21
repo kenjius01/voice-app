@@ -29,7 +29,7 @@ Trang web có chức năng giúp người dùng tìm kiếm thông tin về các
   + Xem tổng hợp những nhận xét, đánh giá, phê bình và điểm số của một bộ phim thông qua số thứ tự (Lệnh: Open the movie + số thứ tự phim)
 ### 2. NewsPaper
 Nếu người dùng muốn đọc báo, có thể đến với chức năng xem tin tức của trang web. Ở đây, ta có thể tìm kiếm các tin tức từ đủ mọi lĩnh vực thể loại hay bất kì nội dung nào.
-  #### Link demo chức năng: [Demo](https://drive.google.com/file/d/1Z2V3iNJbtzR2z6cHcZ5BswrAf2okScy7/view?usp=sharing)
+  #### Link demo chức năng: [Demo](https://drive.google.com/file/d/16gBL2VuONiZTH8xdFs3CiBeZsjQEm1iz/view?usp=sharing)
   #### Cách thức hoạt động:
   + Nếu đang không ở trang tin tức, người dùng có thể điều hướng sang bằng câu lệnh 'Go to news page' hoặc 'i want to read some news'.
   + Ở trang news, người dùng có thể tra các câu lệnh khả dụng ở icon bên trên góc bên phải màn hình.
