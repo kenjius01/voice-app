@@ -12,7 +12,7 @@ export const NewsCard = ({
   const scrollToRef = (ref) => window.scroll(0, ref.current.offsetTop-50);
   useEffect(() => {
     setElRefs((refs) =>
-      Array(20)
+      Array(120)
         .fill()
         .map((_, j) => refs[j] || createRef())
     );
