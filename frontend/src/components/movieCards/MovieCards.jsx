@@ -76,8 +76,8 @@ export const MovieCards = ({ movies, activeMovies }) => {
 
   if (!movies.length) {
     return (
-      <div className='main-container'>
-        <div className='content'>
+      <div className='movie-container'>
+        <div className='movie-content'>
           <Dialog
             open={open}
             TransitionComponent={Transition}
@@ -277,7 +277,7 @@ export const MovieCards = ({ movies, activeMovies }) => {
 
       <Grow in>
         <Grid
-          className='container'
+          className='movie-card'
           container
           alignItems='stretch'
           spacing={3}
@@ -289,7 +289,7 @@ export const MovieCards = ({ movies, activeMovies }) => {
               xs={12}
               sm={6}
               md={4}
-              lg={3}
+              xl={3}
               style={{ display: 'flex' }}
             >
               <CardMovies
