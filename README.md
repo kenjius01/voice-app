@@ -1,13 +1,5 @@
 # Bài tập lớn môn Xử lý tiếng nói
 
-**Dự án**: Alan Web App
-
-**Thành viên - công việc: (Nhóm 7)**
- 1. 19021388 - Kiều Văn Tuyên (Làm chức năng dự đoán thể loại nhạc)
- 2. 19021394 - Nguyễn Đức Vinh (Làm chức năng xem phim)
- 3. 19021359 - Kiều Thái Sơn (Làm chức năng xem tin tức)
- 5. 19031393 - Hà Long Việt (Làm chức năng xem thời tiết)
- 
 ## Mô tả chung về dự án
 Trang web cung cấp trợ lý giọng nói là [Alan AI](https://alan.app/) giúp cho việc tương tác với máy tính trở nên dễ dàng hơn. Trang web gồm các chức năng chính là: Xem phim, đọc báo, xem thông tin thời tiết các khu vực, và cuối cùng là phân loại thể loại âm nhạc.
 
